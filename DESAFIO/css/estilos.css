@@ -1,0 +1,346 @@
+:root {
+    --cor-primaria: #c0392b;
+    --cor-botao: #28a745;
+    --cor-fundo-bege: #fff8f0;
+    --cor-fundo-cinza: #f4f4f4;
+    --cor-fundo-claro: #ffffff;
+}
+
+/* RESET SIMPLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* CABEÇALHO */
+header {
+    background: #c0392b;
+    color: #fff;
+    padding: 1rem 2rem;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    font-size: 1.5rem;
+}
+
+nav ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+
+nav ul li a {
+    color: #fff;
+}
+
+.botao-menu {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* HERO */
+.heroi {
+    background: url('../img/pizza.jpeg') no-repeat center center/cover;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    background-attachment: fixed;
+}
+
+.heroi h1 {
+    font-size: 2.5rem;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+/* SEÇÃO BENEFÍCIOS */
+.beneficios {
+    padding: 2rem;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.caixas-beneficios {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.beneficio {
+    background: #fff;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    padding: 30px 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.beneficio:hover {
+    transform: translateY(-5px);
+}
+
+.beneficio i {
+    font-size: 2.5rem;
+    color: var(--cor-primaria);
+    margin-bottom: 15px;
+}
+
+.beneficio p {
+    font-weight: 500;
+}
+
+/* TÍTULOS */
+section h2 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-size: 2rem;
+    color: #333;
+}
+
+/* SABORES */
+.sabores {
+    background-color: var(--cor-fundo-bege);
+    padding: 4rem 2rem;
+}
+
+.sabores ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style: none;
+}
+
+.sabores li {
+    background-color: #fbe0c3;
+    color: #333;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* DEPOIMENTOS */
+.depoimentos {
+    background-color: var(--cor-fundo-cinza);
+    text-align: center;
+    border-bottom: 3px solid var(--cor-primaria);
+    padding: 4rem 2rem;
+}
+
+.container-depoimentos {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.depoimento {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.depoimento.ativo {
+    display: flex;
+}
+
+.depoimento img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.depoimento p {
+    font-style: italic;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.botoes-carrossel {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.botoes-carrossel button {
+    background-color: var(--cor-primaria);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.botoes-carrossel button:hover {
+    background-color: #b92015;
+}
+
+/* FORMULÁRIO DE PEDIDO */
+.formulario {
+    background-color: var(--cor-fundo-claro);
+    padding: 4rem 2rem;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type="text"],
+input[type="tel"],
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+form p {
+    color: var(--cor-primaria);
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 1.05rem;
+}
+
+.opcoes {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.opcoes label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    background-color: var(--cor-botao);
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* RODAPÉ */
+footer {
+    background-color: #222222;
+    color: white;
+    text-align: center;
+    padding: 30px 5%;
+    position: relative;
+}
+
+.icones-sociais {
+    font-size: 1.5rem;
+    margin: 15px 0;
+}
+
+.icones-sociais a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.icones-sociais a:hover {
+    color: var(--cor-primaria);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;
+    }
+    
+    .botao-menu {
+        display: block;
+    }
+
+    #menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--cor-primaria);
+        padding: 20px 0;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    #menu.mostrar {
+        display: flex;
+    }
+    
+    .heroi h1 {
+        font-size: 1.5rem;
+        padding: 15px 20px;
+    }
+
+    .caixas-beneficios {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .beneficio {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .opcoes {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

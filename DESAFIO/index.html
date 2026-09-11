@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizzaria Delivery - Sua Pizza Quentinha</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/estilos.css" />
+    <script src="js/script.js" defer></script>
+
+    <style>
+        
+    </style>
+</head>
+<body>
+
+    <!-- CABEÇALHO -->
+    <header>
+        <nav>
+            <h1><i class="fas fa-pizza-slice"></i> Pizzaria Delícia</h1>
+            <div class="botao-menu" onclick="alternarMenu()"><i class="fas fa-bars"></i></div>
+            <ul id="menu">
+                <li><a href="#beneficios">Benefícios</a></li>
+                <li><a href="#sabores">Sabores</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><a href="#contato">Peça já</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="heroi">
+            <h1>A pizza quentinha que chega até você!</h1>
+        </section>
+
+        <!-- INÍCIO DOS BENEFÍCIOS -->
+        <section class="beneficios" id="beneficios">
+            <h2>Por que escolher nossa pizzaria?</h2>
+            <div class="caixas-beneficios">
+                <div class="beneficio">
+                    <i class="fas fa-pizza-slice"></i>
+                    <p>Ingredientes frescos</p>
+                </div>
+                <div class="beneficio">
+                    <i class="fas fa-motorcycle"></i>
+                    <p>Entrega rápida</p>
+                </div>
+                <div class="beneficio">
+                    <i class="fas fa-heart"></i>
+                    <p>Sabor inigualável</p>
+                </div>
+            </div>
+        </section>
+        <!-- FIM DOS BENEFÍCIOS -->
+
+        <!-- INÍCIO DOS SABORES -->
+        <section class="sabores" id="sabores">
+            <h2>Nossos Sabores</h2>
+            <ul>
+                <li>Calabresa</li>
+                <li>Margherita</li>
+                <li>Frango com Catupiry</li>
+                <li>Portuguesa</li>
+                <li>Vegetariana</li>
+            </ul>
+        </section>
+        <!-- FIM DOS SABORES -->
+
+        <!-- INÍCIO DOS DEPOIMENTOS -->
+        <section class="depoimentos" id="depoimentos">
+            <h2>O que nossos clientes dizem</h2>
+            <div class="container-depoimentos">
+                <div class="depoimento ativo">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Maria">
+                    <p>"A melhor pizza da cidade, sempre quentinha!" - Maria</p>
+                </div>
+                <div class="depoimento">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="João">
+                    <p>"Entrega super rápida, recomendo demais!" - João</p>
+                </div>
+                <div class="depoimento">
+                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Ana">
+                    <p>"Sabor inigualável, virei fã!" - Ana</p>
+                </div>
+                <div class="botoes-carrossel">
+                    <button onclick="anterior()">Anterior</button>
+                    <button onclick="proximo()">Próximo</button>
+                </div>
+            </div>
+        </section>
+        <!-- FIM DOS DEPOIMENTOS -->
+
+        <!-- INÍCIO DO FORMULÁRIO -->
+        <section class="formulario" id="contato">
+            <h2>Peça já a sua pizza!</h2>
+            <form action="obrigado.html" method="get">
+                <input type="text" placeholder="Nome completo" required />
+                <input type="tel" placeholder="Telefone" required />
+                <input type="text" placeholder="Endereço de entrega" required />
+                
+                <select required>
+                    <option value="">Escolha o sabor</option>
+                    <option>Calabresa</option>
+                    <option>Margherita</option>
+                    <option>Frango com Catupiry</option>
+                    <option>Portuguesa</option>
+                    <option>Vegetariana</option>
+                </select>
+
+                <p>Forma de pagamento:</p>
+                <div class="opcoes">
+                    <label><input type="radio" name="pagamento" value="Dinheiro" required /> Dinheiro</label>
+                    <label><input type="radio" name="pagamento" value="Cartão" /> Cartão</label>
+                    <label><input type="radio" name="pagamento" value="PIX" /> PIX</label>
+                </div>
+
+                <p>Adicionais:</p>
+                <div class="opcoes">
+                    <label><input type="checkbox" name="borda" value="Sim" /> Borda recheada</label>
+                    <label><input type="checkbox" name="bebida" value="Sim" /> Bebida</label>
+                </div>
+
+                <button type="submit">Enviar Pedido</button>
+            </form>
+        </section>
+        <!-- FIM DO FORMULÁRIO -->
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <p>Siga-nos nas redes sociais</p>
+        <div class="icones-sociais">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <p>&copy; 2025 Pizzaria Delícia</p>
+    </footer>
+
+</body>
+</html>
